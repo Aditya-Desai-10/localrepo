@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+        Netflix
+    </title>
+        <style>
+          .header{
+        
+         display: flex;
+         top: 0px;
+         left: 0px;
+         right: 0px;
+         height:60px;
+       
+         background-color: rgb(0, 0, 0);
+         border-bottom-width:2px;
+         border-bottom-style: solid;
+         border-bottom-color: rgb(54, 50, 50);
+
+          }
+
+          .netflix-img{
+           
+             padding-top:5px;
+            height:50px;
+            width:100px;
+            vertical-align: middle;
+            margin-right:200px;
+            margin-left: 100px;
+          }
+          
+          .buttons{
+            padding-top: 15px;
+          }
+         
+          .home-button,.tv-button,.movies-button,.new-button,.list-button{
+           
+            padding:8px;
+            height:30px;
+            width:100px;
+            background-color: rgb(1, 0, 0);
+            color: rgb(255, 252, 252);
+            border:none;
+           
+          }
+
+          .search-button{
+            padding-top:20px;
+            background-color: black;
+            width:20px;
+            height:20px;
+            border: none;
+            margin-right:20px;
+            margin-left:250px;
+          }
+
+
+            .search-img{
+           
+            width:20px;
+            height: 20px;
+          }
+
+
+          .notification-img{
+            width:60px;
+            height: 35px;
+          }
+
+
+          .notification-button{
+            padding-top: 15px;
+            background-color: rgb(0, 0, 0);
+            height:30px;
+            width: 20px;
+            border: none;
+          }
+        
+          .profile-button{
+            width:40px;
+            height: 40px;
+            margin-left:20px;
+            background-color: black;
+            border: none;
+            margin-left:50px;
+           
+          
+          }
+
+          .profile-img{
+            padding-top: 15px;
+            background-color: rgb(0, 0, 0);
+            height:30px;
+            width: 30px;
+     
+          
+          
+          }
+
+          .stranger-name{
+
+            width:100%;
+            height: 500px;
+          }
+          .stranger-title-img{
+            margin-top:-10px;
+            padding-top:80px;
+            padding-left:80px;
+            height: 100px;
+            width: 200px;
+
+           
+          
+          }
+
+          
+
+      
+        
+
+        stranger-img{
+          width: 20px;
+          height: 10px;
+        }
+
+
+
+        
+        body{
+          background-color: black;
+        }
+        
+        .title-paragraph{
+          color: aliceblue;
+          font-size: 30px;
+          font-family: arial;
+          font-weight: bold;
+          margin-left:100px;
+        }
+       
+
+        .details{
+          margin-top: -15px;
+          color: aliceblue;
+          font-size:10px;
+          font-family: arial;
+          margin-left:100px;
+        }
+
+        .info{
+          width:450px;
+          color: aliceblue;
+          font-size:15px;
+          font-family: arial;
+          margin-left:100px;
+        }
+
+        .start{
+          margin-top: 10px;
+          margin-left: 100px;
+          height:40px;
+          width:150px;
+          font-size:15px;
+          font-weight: bold;
+          background-color:red;
+          color: aliceblue;
+          border-radius: 6px;
+          border: none;
+        }
+
+        .trailer{
+
+          margin-top: 10px;
+          margin-left: 13px;
+          height:40px;
+          width:130px;
+          font-size:15px;
+          font-weight: bold;
+          background-color:rgb(11, 11, 11);
+          color: aliceblue;
+          border-radius: 6px;
+          border-width:1px;
+          border-color: aliceblue;
+        }
+
+
+        .wallpaper{
+          height: 450px;
+          width: 750px;
+          margin-top:-25%;
+          margin-left:42%;
+          display: flex;
+          
+        }
+
+        .movies-names,.webseries-names,.shows-names,.anime-names{
+          font-family: arial;
+          color: aliceblue;
+          font-size: 15px;
+          margin-left: 100px;
+          font-weight: bold;
+         
+        }
+
+        .movies-sugg,.webseries-sugg,.shows-sugg,.anime-sugg{
+          
+          margin-left: 100px;
+          height:30px;
+          display: grid;
+          grid-template-columns  :  1fr 1fr 1fr 1fr 1fr 1fr;
+          background-color: rgb(0, 0, 0);
+          margin-bottom:270px;
+        }
+
+        .movie-1,.movie-2,.movie-3,.movie-4,.movie-5,.movie-6,
+        .webseries-1,.webseries-2,.webseries-3,.webseries-4,.webseries-5,.webseries-6,
+        .shows-1,.shows-2,.shows-3,.shows-4,.shows-5,.shows-6,
+        .anime-1,.anime-2,.anime-3,.anime-4,.anime-5,.anime-6{
+          height:100px;
+          
+
+        }
+        .movie-1-img,.movie-2-img,.movie-3-img,.movie-4-img,.movie-5-img,.movie-6-img,
+        .webseries-1-img,.webseries-2-img,.webseries-3-img,.webseries-4-img,.webseries-5-img,.webseries-6-img,
+        .shows-1-img,.shows-2-img,.shows-3-img,.shows-4-img,.shows-5-img,.shows-6-img,
+        .anime-1-img,.anime-2-img,.anime-3-img,.anime-4-img,.anime-5-img,.anime-6-img{
+          height:250px;
+          border-radius: 8px;
+          
+
+        }
+
+
+        .footer{
+         
+          display: flex;
+         top: 0px;
+         left: 0px;
+         right: 0px;
+         height:500px;
+         margin-top: 300px;
+         background-color: rgb(0, 0, 0);
+       
+         border-top-width:3px;
+         border-top-style: solid;
+         border-top-color:rgb(47, 45, 45);
+
+         border-bottom-width:3px;
+         border-bottom-style: solid;
+         border-bottom-color:rgb(47, 45, 45);
+         
+
+         
+
+
+        }
+
+
+
+
+        .footer-img{
+          padding-top: 40px;
+            margin-left:120px;
+            height:400px;
+            width: 700px;
+        }
+
+        .footer-description{
+         
+          color: aliceblue;
+          font-size: 30px;
+          font-family: Arial;
+          padding-top: 120px;
+          padding-left: 140px;
+        
+        }
+        
+        .email-button{
+          margin-top: 45px;
+          padding: 15px;
+          padding-left: 20px;
+          padding-right: 60px;
+          color: aliceblue;
+          background-color: rgb(251, 60, 60);
+          border: none;
+          border-radius: 3px;
+          font-family: arial;
+
+        }
+
+        .start-button{
+          margin-left: 20px;
+          margin-top: 45px;
+          padding: 15px;
+          padding-left: 20px;
+          padding-right:20px;
+          color: aliceblue;
+          background-color: rgb(0, 0, 0);
+          
+          border-radius: 3px;
+          font-family: arial;
+          border-color: aliceblue;
+
+
+        }
+        .footer-div-1{
+          margin-left: 100px;
+          
+          width: 100%;
+          height: 400px;
+        }
+
+        .footer-img-div1{
+          height: 200px;
+          width: 300px;
+          margin-bottom:-90px;
+    
+        }
+
+        .footer-2-div-1-details{
+          color: rgb(56, 56, 56);
+          padding-left:90px;
+          font-family: arial;
+          font-size: 15px;
+          display: flex;
+        }
+
+        .language-button{
+          padding-top:10px;
+          padding-bottom: 10px;
+          padding-left: 20px;
+          padding-right: 20px;
+          margin-top:40px;
+          margin-left: 90px;
+          color: aliceblue;
+          background-color: rgb(39, 38, 38);
+          border: none;
+          border-radius: 3px;
+        }
+        
+        .footer-end{
+          color: rgb(78, 79, 79);
+          margin-left:450px ;
+          margin-top: -100px;
+          font-size:20px;
+          font-family: arial;
+          
+        }
+        
+       
+        </style> 
+
+  </head>
+  <body>
+    <div class="header">
+
+      
+       <img class="netflix-img" src="C:\Users\Aditya Desai\Desktop\project\1_netflix image.png">
+
+       <div class="buttons">
+        <button class="home-button"> Home </button>
+     
+
+
+       
+        <button class="tv-button"> TV Shows</button>
+      
+
+     
+     
+        <button class="movies-button">Movies </button>
+     
+     
+
+      
+         <button class="new-button"> New </button>
+      
+
+
+
+    
+        <button class="list-button"> My Lists </button>
+
+
+
+
+    </div>
+      
+     <button class="search-button"> 
+          <img class="search-img" src="C:\Users\Aditya Desai\Desktop\project\search.png">
+        </button>
+
+
+        <button class="notification-button"> 
+          <img class="notification-img" src="C:\Users\Aditya Desai\Desktop\project\notificaton.webp">
+        </button>
+
+
+
+        <button class="profile-button"> 
+          <img class="profile-img" src="C:\Users\Aditya Desai\Desktop\project\profile_3550439.png">
+        </button>
+
+
+
+
+
+     
+ 
+    </div>
+
+
+    <div class="stranger-name">
+      <img class="stranger-title-img"  src="C:\Users\Aditya Desai\Desktop\project\Stranger_Things_logo.png">
+
+       <p class="title-paragraph">
+        Stranger Things
+       </p>
+
+       <p class="details">
+        2016 &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;   16+ &nbsp;&nbsp;&nbsp;&nbsp   | &nbsp;&nbsp;&nbsp;   4 seasons 
+       </p>
+
+       <p class="info">
+        When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces and one strange little girl.
+       </p>
+
+
+      <button class="start">Start Watching</button>
+      <button class="trailer">Play trailer</button>
+
+
+      <img class="wallpaper" src="C:\Users\Aditya Desai\Desktop\project\HD-wallpaper-stranger-things-banner.jpg">
+
+ </div>
+        <p class="movies-names">
+          Movies
+        </p>
+
+
+
+
+    <div class="movies-sugg">
+
+
+      <div class="movie-1">
+        <img class="movie-1-img" src="C:\Users\Aditya Desai\Desktop\project\movie-1.jpeg">
+      </div>
+
+
+      <div class="movie-2">
+        <img class="movie-2-img" src="C:\Users\Aditya Desai\Desktop\project\movie-2.jpeg">
+      </div>
+
+
+      <div class="movie-3">
+        <img class="movie-3-img" src="C:\Users\Aditya Desai\Desktop\project\movie-3.jpeg">
+      </div>
+
+
+      <div class="movie-4">
+        <img class="movie-4-img" src="C:\Users\Aditya Desai\Desktop\project\movie-4.jpeg">
+      </div>
+
+
+      <div class="movie-5">
+        <img class="movie-5-img" src="C:\Users\Aditya Desai\Desktop\project\movie-5.jpeg">
+      </div>
+
+      <div class="movie-6">
+        <img class="movie-6-img" src="C:\Users\Aditya Desai\Desktop\project\movie-6.jpeg">
+      </div>
+
+
+    </div>
+  
+      
+   
+
+    <p class="webseries-names">
+      Webseries
+    </p>
+
+
+    
+
+    <div class="webseries-sugg">
+
+
+      <div class="webseries-1">
+        <img class="webseries-1-img" src="C:\Users\Aditya Desai\Desktop\project\webseries-1.jpeg">
+      </div>
+
+
+      <div class="webseries-2">
+        <img class="webseries-2-img" src="C:\Users\Aditya Desai\Desktop\project\webseries-2.jpeg">
+      </div>
+
+
+      <div class="webseries-3">
+        <img class="webseries-3-img" src="C:\Users\Aditya Desai\Desktop\project\webseries-3.jpeg">
+      </div>
+
+
+      <div class="webseries-4">
+        <img class="webseries-4-img" src="C:\Users\Aditya Desai\Desktop\project\webseries-4.jpeg">
+      </div>
+
+
+      <div class="webseries-5">
+        <img class="webseries-5-img" src="C:\Users\Aditya Desai\Desktop\project\webseries-5.jpeg">
+      </div>
+
+      <div class="webseries-6">
+        <img class="webseries-6-img" src="C:\Users\Aditya Desai\Desktop\project\webseries-6.jpeg">
+      </div>
+
+
+    </div>
+  
+
+
+    <p class="shows-names">
+      TV Shows
+    </p>
+
+
+
+
+<div class="shows-sugg">
+
+
+  <div class="shows-1">
+    <img class="shows-1-img" src="C:\Users\Aditya Desai\Desktop\project\shows-1.jpeg">
+  </div>
+
+
+  <div class="shows-2">
+    <img class="shows-2-img" src="C:\Users\Aditya Desai\Desktop\project\shows-2.jpeg">
+  </div>
+
+
+  <div class="shows-3">
+    <img class="shows-3-img" src="C:\Users\Aditya Desai\Desktop\project\shows-3.jpeg">
+  </div>
+
+
+  <div class="shows-4">
+    <img class="shows-4-img" src="C:\Users\Aditya Desai\Desktop\project\shows-4.jpeg">
+  </div>
+
+
+  <div class="shows-5">
+    <img class="shows-5-img" src="C:\Users\Aditya Desai\Desktop\project\shows-5.jpeg">
+  </div>
+
+  <div class="shows-6">
+    <img class="shows-6-img" src="C:\Users\Aditya Desai\Desktop\project\shows-6.jpeg">
+  </div>
+
+
+</div>
+
+
+
+
+
+
+
+<p class="anime-names">
+  Anime
+</p>
+
+
+
+
+<div class="anime-sugg">
+
+
+<div class="anime-1">
+<img class="anime-1-img" src="C:\Users\Aditya Desai\Desktop\project\anime-1.jpeg">
+</div>
+
+
+<div class="anime-2">
+<img class="anime-2-img" src="C:\Users\Aditya Desai\Desktop\project\anime-2.jpeg">
+</div>
+
+
+<div class="anime-3">
+<img class="anime-3-img" src="C:\Users\Aditya Desai\Desktop\project\anime-3.jpeg">
+</div>
+
+
+<div class="anime-4">
+<img class="anime-4-img" src="C:\Users\Aditya Desai\Desktop\project\anime-4.jpeg">
+</div>
+
+
+<div class="anime-5">
+<img class="anime-5-img" src="C:\Users\Aditya Desai\Desktop\project\anime-5.jpeg">
+</div>
+
+<div class="anime-6">
+<img class="anime-6-img" src="C:\Users\Aditya Desai\Desktop\project\anime-6.jpeg">
+</div>
+
+
+</div>
+
+  
+
+
+<div class="footer">
+  <p class="footer-description">
+    Gain Access to Unlimited  <br>Movies,TV Shows And Many more.  <br>
+ <button class="email-button">
+    Your Email Address
+  </button>
+
+  <button class="start-button">
+    Get Started
+  </button>
+
+  </p>
+ 
+  <img class="footer-img" src="C:\Users\Aditya Desai\Desktop\project\footer2.jpeg">
+</div>
+ 
+
+
+
+    
+
+
+
+  <div class="footer-2">
+    <div class="footer-div-1">
+      
+       <img class="footer-img-div1" src="C:\Users\Aditya Desai\Desktop\project\footer-image.jpeg">
+       <p class="footer-2-div-1-details">
+        ⟟ Netflix India
+       </p>
+       <button class="language-button">
+        English ▼ 
+       </button>
+      <p class="footer-end">
+        Unsubscribe &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Terms of Conditions &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Privacy  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Help Center
+      </p>
+
+    </div>
+
+
+
+  </div>
+
+
+
+  </body>
+        
+
+      
+  </body>
+</html>
